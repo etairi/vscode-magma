@@ -1,55 +1,89 @@
 {
-    "name": "magma",
-    "displayName": "Magma",
-    "description": "Magma language extension for Visual Studio Code",
-    "version": "1.0.0",
-    "publisher": "etairi",
-    "author": {
-        "name": "Erkan Tairi"
-    },
-    "engines": {
-        "vscode": "^1.19.0"
-    },
-    "activationEvents": [
-        "onLanguage:magma",
-        "onLanguage:spec"
-    ],
-    "categories": [
-        "Languages",
-        "Snippets"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "magma",
-                "aliases": ["Magma", "magma"],
-                "extensions": [".m",".magma","..magmarc","..magmarc-dev"],
-                "configuration": "./language-configuration.json"
-            },
-            {
-                "id": "spec",
-                "aliases": ["Magma Spec", "spec"],
-                "extensions": [".spec"],
-                "configuration": "./language-configuration.json"
-            }
+  "name": "magma",
+  "displayName": "Magma",
+  "description": "Magma language extension for Visual Studio Code",
+  "version": "1.0.0",
+  "publisher": "etairi",
+  "author": {
+    "name": "Erkan Tairi"
+  },
+  "categories": [
+    "Languages",
+    "Snippets"
+  ],
+  "engines": {
+    "vscode": "^1.19.0"
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install",
+    "test": "npm run compile && node ./node_modules/vscode/bin/test",
+    "lint": "node ./node_modules/tslint/bin/tslint ./src/*.ts"
+  },
+  "extensionDependencies": [],
+  "dependencies": {
+    "vscode": "^1.1.10"
+  },
+  "devDependencies": {
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.2",
+    "vscode": "^1.1.10",
+    "@types/node": "^7.0.43",
+    "@types/mocha": "^2.2.42"
+  },
+  "activationEvents": [
+    "onLanguage:magma",
+    "onLanguage:spec"
+  ],
+  "main": "./out/magmaMain",
+  "contributes": {
+    "languages": [
+      {
+        "id": "magma",
+        "aliases": [
+          "Magma",
+          "magma"
         ],
-        "grammars": [
-            {
-                "language": "magma",
-                "scopeName": "source.magma",
-                "path": "./syntaxes/magma.tmLanguage"
-            },
-            {
-                "language": "spec",
-                "scopeName": "source.magma.spec",
-                "path": "./syntaxes/spec.tmLanguage"
-            }
+        "extensions": [
+          ".m",
+          ".mag",
+          ".magma",
+          "..magmarc",
+          "..magmarc-dev"
         ],
-        "snippets": [
-            {
-                "language": "magma",
-                "path": "./snippets/snippets.json"
-            }
-        ]
-    }
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "spec",
+        "aliases": [
+          "Magma Spec",
+          "spec"
+        ],
+        "extensions": [
+          ".spec"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "magma",
+        "scopeName": "source.magma",
+        "path": "./syntaxes/magma.tmLanguage"
+      },
+      {
+        "language": "spec",
+        "scopeName": "source.magma.spec",
+        "path": "./syntaxes/spec.tmLanguage"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "magma",
+        "path": "./snippets/snippets.json"
+      }
+    ]
+  }
 }

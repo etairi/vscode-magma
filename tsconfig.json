@@ -1,0 +1,16 @@
+{
+	"compilerOptions": {
+		"module": "commonjs",
+		"outDir": "out",
+		"rootDir": "src",
+		"sourceMap": true,
+		"target": "es6",
+		"lib": [
+			"es6"
+		]
+	},
+	"exclude": [
+		"node_modules",
+		".vscode-test"
+	]
+}
