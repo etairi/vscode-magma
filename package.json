@@ -1,0 +1,55 @@
+{
+    "name": "magma",
+    "displayName": "Magma",
+    "description": "Magma language extension for Visual Studio Code",
+    "version": "1.0.0",
+    "publisher": "etairi",
+    "author": {
+        "name": "Erkan Tairi"
+    },
+    "engines": {
+        "vscode": "^1.19.0"
+    },
+    "activationEvents": [
+        "onLanguage:magma",
+        "onLanguage:spec"
+    ],
+    "categories": [
+        "Languages",
+        "Snippets"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "magma",
+                "aliases": ["Magma", "magma"],
+                "extensions": [".m",".magma","..magmarc","..magmarc-dev"],
+                "configuration": "./language-configuration.json"
+            },
+            {
+                "id": "spec",
+                "aliases": ["Magma Spec", "spec"],
+                "extensions": [".spec"],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "magma",
+                "scopeName": "source.magma",
+                "path": "./syntaxes/magma.tmLanguage"
+            },
+            {
+                "language": "spec",
+                "scopeName": "source.magma.spec",
+                "path": "./syntaxes/spec.tmLanguage"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "magma",
+                "path": "./snippets/snippets.json"
+            }
+        ]
+    }
+}

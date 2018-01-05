@@ -1,0 +1,212 @@
+{
+	"as": {
+		"prefix": "as",
+		"body": "assert $1;",
+		"description": "Assert",
+		"scope": "source.magma"
+	},
+	"as2": {
+		"prefix": "as2",
+		"body": "assert2 $1;",
+		"description": "Assert2",
+		"scope": "source.magma"
+	},
+	"as3": {
+		"prefix": "as3",
+		"body": "assert3 $1;",
+		"description": "Assert3",
+		"scope": "source.magma"
+	},
+	"case": {
+		"prefix": "case",
+		"body": "case $1 :\r\n\twhen $2 : ${3:/* TODO: implement */};\r\n\t${4:else : ${5:/* TODO: implement */};}\r\nend case;",
+		"description": "Case Statement",
+		"scope": "source.magma"
+	},
+	"bp": {
+		"prefix": "bp",
+		"body": "error \"Breakpoint\";\r\n",
+		"description": "Create Breakpoint",
+		"scope": "source.magma"
+	},
+	"func": {
+		"prefix": "func",
+		"body": "${1:function_name} := function(${2:params})\r\n\t${3:/* TODO: implement $1 */}\r\nend function;",
+		"description": "Create Function",
+		"scope": "source.magma"
+	},
+	"cgp": {
+		"prefix": "cgp",
+		"body": "${1:G}<$2> := Group<$2 | $3>;",
+		"description": "Create Group (Presentation)",
+		"scope": "source.magma"
+	},
+	"intr": {
+		"prefix": "intr",
+		"body": "intrinsic ${1:function_name} ( ${2:params} )\r\n{$3}\r\n\t${4:/* TODO: implement $1 */}\r\nend intrinsic;",
+		"description": "Create Intrinsic",
+		"scope": "source.magma"
+	},
+	"proc": {
+		"prefix": "proc",
+		"body": "${1:procedure_name} := procedure(${2:params})\r\n\t${3:/* TODO: implement $1 */}\r\nend procedure;",
+		"description": "Create Procedure",
+		"scope": "source.magma"
+	},
+	"dm": {
+		"prefix": "dm",
+		"body": "printf \"$1: %m\\n\", $1;",
+		"description": "Debug Print Magma Statement",
+		"scope": "source.magma"
+	},
+	"dp": {
+		"prefix": "dp",
+		"body": "printf \"$1: %o\\n\", $1;",
+		"description": "Debug Print Statement",
+		"scope": "source.magma"
+	},
+	"ei": {
+		"prefix": "ei",
+		"body": "end if;$1",
+		"description": "End If Statement",
+		"scope": "source.magma"
+	},
+	"ef": {
+		"prefix": "ef",
+		"body": "error if $1 : \"$2\";",
+		"description": "Error If",
+		"scope": "source.magma"
+	},
+	"e": {
+		"prefix": "e",
+		"body": "error \"$1\";\r\n",
+		"description": "Error",
+		"scope": "source.magma"
+	},
+	"for": {
+		"prefix": "for",
+		"body": "for $1 do\r\n\t${2:/* TODO: implement */}\r\nend for;",
+		"description": "For Statement",
+		"scope": "source.magma"
+	},
+	"hom": {
+		"prefix": "hom",
+		"body": "${1:h} := hom< ${2:G}->${3:H} | $4 >;",
+		"description": "Homomorphism",
+		"scope": "source.magma"
+	},
+	"ifl": {
+		"prefix": "ifl",
+		"body": "if $1 then ${2:/* TODO: implement */} end if;",
+		"description": "If Statement (line)",
+		"scope": "source.magma"
+	},
+	"if": {
+		"prefix": "if",
+		"body": "if $1 then\r\n\t${2:/* TODO: implement */}\r\nend if;",
+		"description": "If Statement",
+		"scope": "source.magma"
+	},
+	"ife": {
+		"prefix": "ife",
+		"body": "if $1 then\r\n\t${2:/* TODO: implement */}\r\nelse\r\n\t${3:/* TODO: implement */}\r\nend if;",
+		"description": "If-Else Statement",
+		"scope": "source.magma"
+	},
+	"im": {
+		"prefix": "im",
+		"body": "import \"$1\";",
+		"description": "Import",
+		"scope": "source.magma"
+	},
+	"lo": {
+		"prefix": "lo",
+		"body": "load \"$1\";",
+		"description": "Load",
+		"scope": "source.magma"
+	},
+	"pr": {
+		"prefix": "pr",
+		"body": "phi_$1, R_$1 := PermutationRepresentation($1);",
+		"description": "Permutation Representation",
+		"scope": "source.magma"
+	},
+	"p": {
+		"prefix": "p",
+		"body": "print \"$1\";",
+		"description": "Print",
+		"scope": "source.magma"
+	},
+	"q": {
+		"prefix": "q",
+		"body": "${1:Q}, ${2:m} := quo< ${3:G} | $4 >;",
+		"description": "Quotient",
+		"scope": "source.magma"
+	},
+	"recformat": {
+		"prefix": "recformat",
+		"body": "recformat < ${1:/* params */} >;${2}",
+		"description": "Record Format",
+		"scope": "source.magma"
+	},
+	"rec": {
+		"prefix": "rec",
+		"body": "rec < ${1:/* format */} | ${2:/* variables */} >;${3}",
+		"description": "Record",
+		"scope": "source.magma"
+	},
+	"repeat": {
+		"prefix": "repeat",
+		"body": "repeat\r\n\t${3:/* TODO: implement */}\r\nuntil $2;",
+		"description": "Repeat Statement",
+		"scope": "source.magma"
+	},
+	"log": {
+		"prefix": "log",
+		"body": "SetLogFile(\"$1\");",
+		"description": "Set Log File",
+		"scope": "source.magma"
+	},
+	"gp": {
+		"prefix": "gp",
+		"body": "${1:P} := ${2|SmallGroup,TransitiveGroup|}Process($3);\r\nrepeat\r\n\t${4:G} := Current($1);\r\n\t$5\r\n\tAdvance(~$1);\r\nuntil IsEmpty($1);",
+		"description": "Small Group Process",
+		"scope": "source.magma"
+	},
+	"sub": {
+		"prefix": "sub",
+		"body": "${1:H} := sub< ${2:G} | $3 >;",
+		"description": "Subgroup",
+		"scope": "source.magma"
+	},
+	"sy": {
+		"prefix": "sy",
+		"body": "${1:S} := Sylow(${2:G}, ${3:2});",
+		"description": "Sylow Subgroup",
+		"scope": "source.magma"
+	},
+	"ulog": {
+		"prefix": "ulog",
+		"body": "UnsetLogFile();",
+		"description": "Unset Log File",
+		"scope": "source.magma"
+	},
+	"vt": {
+		"prefix": "vt",
+		"body": "vtime ${1:/* verbose flag */} : $2;",
+		"description": "Verbose Print",
+		"scope": "source.magma"
+	},
+	"vp": {
+		"prefix": "vp",
+		"body": "vprint ${1:/* verbose flag */} : \"$2\";",
+		"description": "Verbose Time",
+		"scope": "source.magma"
+	},
+	"while": {
+		"prefix": "while",
+		"body": "while $1 do\r\n\t${2:/* TODO: implement */}\r\nend while;",
+		"description": "While Statement",
+		"scope": "source.magma"
+	}
+}
