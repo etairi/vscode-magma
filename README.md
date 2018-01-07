@@ -2,7 +2,7 @@
 
 This extension adds language support for the [Magma computational algebra system](http://magma.maths.usyd.edu.au/) to Visual Studio Code. Its main features can be seen below.
 
-Read the [`CHANGELOG`](CHANGELOG) to know what has changed over the last version of this extension.
+Read the [`CHANGELOG`](CHANGELOG.md) to know what has changed over the last version of this extension.
 
 ## Main Features
 
@@ -39,5 +39,5 @@ with the following additional clauses:
   their primary identity, that wish is to be respected by all contributors. 
 
 
-If you have questions or comments, please feel free to email the author. For feature requests, suggestions, and bug reports, please [open an issue on this Github repository](https://github.com/etairi/sidh-rs/issues) (or, send an email to the author). Patches are also welcomed as [pull requests on the GitHub repository](https://github.com/etairi/sidh-rs/pulls), as well as by
+If you have questions or comments, please feel free to email the author. For feature requests, suggestions, and bug reports, please [open an issue on this Github repository](https://github.com/etairi/vscode-magma/issues) (or, send an email to the author). Patches are also welcomed as [pull requests on this GitHub repository](https://github.com/etairi/vscode-magma/pulls), as well as by
 email.
