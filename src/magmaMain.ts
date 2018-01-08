@@ -4,7 +4,7 @@
  * See LICENSE in the project root for license information.
  *--------------------------------------------------------*/
 
- 'use strict';
+'use strict';
 
 // The module 'vscode' contains the VS Code extensibility API.
 // Import the module and reference it with the alias vscode.
@@ -21,4 +21,4 @@ export function activate(context: vscode.ExtensionContext): void {
     }
 }
 
-export function deactivate() { }
+export function deactivate(): void { }
