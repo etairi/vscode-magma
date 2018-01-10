@@ -8,6 +8,10 @@
     "name": "Erkan Tairi"
   },
   "icon": "images/magma-icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/etairi/vscode-magma.git"
+  },
   "categories": [
     "Languages",
     "Snippets"
