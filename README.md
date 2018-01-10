@@ -10,13 +10,13 @@ Read the [`CHANGELOG`](CHANGELOG.md) to know what has changed over the last vers
 - Snippets
 
 ### IDE Features
-![IDE](images/syntax-highlight.png)
+![IDE](https://i.imgur.com/FOzumY5.png)
 
 ## Installation
 
 ### Visual Studio Code
 
-To install the extension from Visual Studio Code, hit `F1` and enter the `ext install magma` command, or use the extension panel and search for `magma`.
+To install the extension from Visual Studio Code, hit `Ctrl+P` and enter the `ext install magma` command, or use the extension panel and search for `magma`.
 
 ### Installing Locally
 

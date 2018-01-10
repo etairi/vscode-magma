@@ -2,11 +2,12 @@
   "name": "magma",
   "displayName": "Magma",
   "description": "Magma language extension for Visual Studio Code",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "publisher": "etairi",
   "author": {
     "name": "Erkan Tairi"
   },
+  "icon": "images/magma-icon.png",
   "categories": [
     "Languages",
     "Snippets"
